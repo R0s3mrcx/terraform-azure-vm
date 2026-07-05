@@ -1,5 +1,6 @@
 # Terraform Azure VM
 
+![CI](https://github.com/r0s3mrcx/terraform-azure-vm/actions/workflows/ci.yml/badge.svg)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?logo=terraform&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=microsoftazure&logoColor=white)
 ![License](https://img.shields.io/github/license/r0s3mrcx/terraform-azure-vm)
