@@ -132,22 +132,22 @@ See [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 # Variables
 
 | Name | Description | Default |
-|---|---|---|
-| `project_name` | Prefix used to name all resources | `terraform-azure-vm` |
-| `resource_group_name` | Name of the Resource Group | `rg-terraform-azure-vm` |
-| `location` | Azure region | `West Europe` |
-| `vnet_address_space` | Address space for the VNet | `10.0.0.0/16` |
-| `subnet_address_prefix` | Address prefix for the Subnet | `10.0.1.0/24` |
-| `allowed_ssh_source` | Source IP/CIDR allowed to SSH into the VM | **required, no default** |
-| `vm_size` | Azure VM size | `Standard_B1s` |
-| `admin_username` | Admin username for the VM | `azureuser` |
-| `ssh_public_key_path` | Local path to your SSH public key | `~/.ssh/id_rsa.pub` |
-| `tags` | Tags applied to resources that support them | `{ environment = "learning", project = "terraform-azure-vm" }` |
+|------|-------------|---------|
+| `project_name` | Prefix used to name all resources | terraform-azure-vm |
+| `resource_group_name` | Name of the Resource Group | rg-terraform-azure-vm |
+| `location` | Azure region | West Europe |
+| `vnet_address_space` | Address space for the VNet | 10.0.0.0/16 |
+| `subnet_address_prefix` | Address prefix for the Subnet | 10.0.1.0/24 |
+| `allowed_ssh_source` | Source IP/CIDR allowed to SSH into the VM | **Required** |
+| `vm_size` | Azure VM size | Standard_B1s |
+| `admin_username` | Admin username for the VM | azureuser |
+| `ssh_public_key_path` | Local path to your SSH public key | ~/.ssh/id_rsa.pub |
+| `tags` | Tags applied to supported resources | environment, project |
 
 # Outputs
 
 | Name | Description |
-|---|---|
+|------|-------------|
 | `resource_group_name` | Name of the created Resource Group |
 | `vm_public_ip` | Public IP address of the VM |
 | `vm_private_ip` | Private IP address of the VM |
