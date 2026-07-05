@@ -1,0 +1,17 @@
+# Copy this file to terraform.tfvars and adjust the values.
+# terraform.tfvars is gitignored - never commit real values.
+
+project_name          = "terraform-azure-vm"
+resource_group_name   = "rg-terraform-azure-vm"
+location              = "West Europe"
+vnet_address_space    = "10.0.0.0/16"
+subnet_address_prefix = "10.0.1.0/24"
+
+# Required: no default is provided for this one on purpose.
+# Find your public IP (e.g. https://ifconfig.me) and use it here as /32.
+# Never use "0.0.0.0/0" - that would open SSH to the entire internet.
+allowed_ssh_source    = "YOUR_PUBLIC_IP/32"
+
+vm_size               = "Standard_B1s"
+admin_username        = "azureuser"
+ssh_public_key_path   = "~/.ssh/id_rsa.pub"

@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  terraform-check:
+    name: Format and Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.0"
+
+      - name: Check formatting
+        run: terraform fmt -check -recursive
+
+      - name: Init (no backend, no cloud credentials needed)
+        run: terraform init -backend=false
+
+      - name: Validate
+        run: terraform validate
