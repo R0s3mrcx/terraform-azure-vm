@@ -153,12 +153,6 @@ See [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 | `vm_private_ip` | Private IP address of the VM |
 | `ssh_connection_command` | Ready-to-use SSH command |
 
-# Future Improvements
-
-- Remote state backend (Azure Storage)
-- Terraform modules
-- Multiple environments (dev/staging/prod) with `.tfvars` files
-
 # License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
