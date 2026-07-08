@@ -5,32 +5,29 @@
 ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=microsoftazure&logoColor=white)
 ![License](https://img.shields.io/github/license/r0s3mrcx/terraform-azure-vm)
 
-Provision Azure infrastructure on Microsoft Azure using Terraform.
+Terraform configuration for provisioning Azure infrastructure.
 
-The project deploys a Resource Group, Virtual Network, Subnet, Network Security Group, Public IP, Network Interface, and an Ubuntu Linux Virtual Machine.
+The project combines Terraform, Azure Virtual Machines, Virtual Networking, Network Security Groups, and GitHub Actions into a small Infrastructure as Code workflow.
 
 # Architecture
 
 ```
-Terraform
-     │
-     ▼
-Resource Group
-     │
-     ▼
-Virtual Network
-     │
-     ├─────────────┐
-     ▼             ▼
- Subnet      Network Security Group
-     │             │
-     └──────┬──────┘
-            ▼
-   Network Interface
-            │
-      ┌─────┴─────┐
-      ▼           ▼
- Public IP    Linux VM
+          Terraform
+               │
+               ▼
+        Resource Group
+               │
+               ▼
+        Virtual Network
+               │
+               ▼
+            Subnet
+               │
+               ▼
+      Network Interface
+         │          │
+         ▼          ▼
+    Public IP    Linux VM
 ```
 
 # Resources Created
